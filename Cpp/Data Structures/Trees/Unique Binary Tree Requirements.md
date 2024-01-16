@@ -1,10 +1,6 @@
 ### [Unique Binary Tree Requirements](https://geeksforgeeks.org/problems/unique-binary-tree-requirements/1)
 
 ## Explanation:
-Sure, let's break down the logic of the code and its time and space complexity.
-
-## Code Logic
-
 1. **Class Definition**: The code defines a class named `Solution`. In C++, a **class** is a user-defined data type that we can use to create objects of this type. It acts as a blueprint for the object we will create.
 
 2. **Function Declaration**: Inside the `Solution` class, a public function named `isPossible` is declared. The **public** keyword means this function can be accessed from outside the class. The function takes two integer parameters, `a` and `b`.
