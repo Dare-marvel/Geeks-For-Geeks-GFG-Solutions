@@ -1,8 +1,6 @@
 ### [Printing Longest Increasing Subsequence](https://www.geeksforgeeks.org/problems/printing-longest-increasing-subsequence/1)
 
 ## Explanation:
-Sure, let's break down the code:
-
 1. **Class and Function Declaration**: The code is written in C++ and defines a class `Solution` with a public function `longestIncreasingSubsequence`. This function takes two parameters: an integer `n` representing the size of the array, and a vector `arr` of integers representing the array itself.
 
 2. **Dynamic Programming Array Initialization**: Two vectors, `dp` and `hash`, of size `n` are initialized. `dp` is filled with 1s, representing the length of the longest increasing subsequence ending at each index. `hash` is used to keep track of the previous index in the longest increasing subsequence.
@@ -74,5 +72,4 @@ public:
         return temp;
     }
 };
-
 ```
