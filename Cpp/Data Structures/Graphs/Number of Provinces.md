@@ -1,8 +1,6 @@
 ### [Number of Provinces](https://www.geeksforgeeks.org/problems/number-of-provinces/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=number_of_provinces)
 
 ## Explanation:
-Sure, here's an explanation of the code:
-
 1. **Class Definition**: The code is encapsulated within a class named `Solution`. This is a common practice in C++ to organize related functions and data together.
 
 2. **DFS Function**: Inside the class, there's a public function `dfs` which takes three parameters: an integer `node` representing the current node, a vector of integers `adjLs[]` representing the adjacency list of the graph, and an integer array `vis[]` to keep track of visited nodes.
