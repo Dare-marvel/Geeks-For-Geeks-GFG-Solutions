@@ -22,52 +22,53 @@ The space complexity is O(n*m) because in worst case scenario depth of recursion
 
 ## Code:
 ```cpp
-// Function to find paths in a 2D grid from top-left to bottom-right
-void findPathHelper(int i, int j, vector<vector<int>>& a, int n, vector<string>& ans, string move,
-                    vector<vector<int>>& vis) {
-    // Base case: If the current position is the bottom-right corner of the grid
-    if (i == n - 1 && j == n - 1) {
-        // Add the current path to the answer vector
-        ans.push_back(move);
-        return;
-    }
-
-    // Explore possible moves: downward, left, right, upward
-
-    // Downward move
-    if (i + 1 < n && !vis[i + 1][j] && a[i + 1][j] == 1) {
-        // Mark the current cell as visited
-        vis[i][j] = 1;
-        // Recur with the downward move and update the path string
-        findPathHelper(i + 1, j, a, n, ans, move + 'D', vis);
-        // Backtrack: mark the current cell as unvisited
-        vis[i][j] = 0;
-    }
-
-    // Left move
-    if (j - 1 >= 0 && !vis[i][j - 1] && a[i][j - 1] == 1) {
-        vis[i][j] = 1;
-        findPathHelper(i, j - 1, a, n, ans, move + 'L', vis);
-        vis[i][j] = 0;
-    }
-
-    // Right move
-    if (j + 1 < n && !vis[i][j + 1] && a[i][j + 1] == 1) {
-        vis[i][j] = 1;
-        findPathHelper(i, j + 1, a, n, ans, move + 'R', vis);
-        vis[i][j] = 0;
-    }
-
-    // Upward move
-    if (i - 1 >= 0 && !vis[i - 1][j] && a[i - 1][j] == 1) {
-        vis[i][j] = 1;
-        findPathHelper(i - 1, j, a, n, ans, move + 'U', vis);
-        vis[i][j] = 0;
-    }
-}
-
-// Public function to initiate the path finding process
+class Solution {
 public:
+    // Helper function to find paths in a 2D grid from top-left to bottom-right
+    void findPathHelper(int i, int j, vector<vector<int>>& a, int n, vector<string>& ans, string move,
+                    vector<vector<int>>& vis) {
+        // Base case: If the current position is the bottom-right corner of the grid
+        if (i == n - 1 && j == n - 1) {
+            // Add the current path to the answer vector
+            ans.push_back(move);
+            return;
+        }
+
+        // Explore possible moves: downward, left, right, upward
+
+        // Downward move
+        if (i + 1 < n && !vis[i + 1][j] && a[i + 1][j] == 1) {
+            // Mark the current cell as visited
+            vis[i][j] = 1;
+            // Recur with the downward move and update the path string
+            findPathHelper(i + 1, j, a, n, ans, move + 'D', vis);
+            // Backtrack: mark the current cell as unvisited
+            vis[i][j] = 0;
+        }
+
+        // Left move
+        if (j - 1 >= 0 && !vis[i][j - 1] && a[i][j - 1] == 1) {
+            vis[i][j] = 1;
+            findPathHelper(i, j - 1, a, n, ans, move + 'L', vis);
+            vis[i][j] = 0;
+        }
+
+        // Right move
+        if (j + 1 < n && !vis[i][j + 1] && a[i][j + 1] == 1) {
+            vis[i][j] = 1;
+            findPathHelper(i, j + 1, a, n, ans, move + 'R', vis);
+            vis[i][j] = 0;
+        }
+
+        // Upward move
+        if (i - 1 >= 0 && !vis[i - 1][j] && a[i - 1][j] == 1) {
+            vis[i][j] = 1;
+            findPathHelper(i - 1, j, a, n, ans, move + 'U', vis);
+            vis[i][j] = 0;
+        }
+    }
+
+    // Public function to initiate the path finding process
     vector<string> findPath(vector<vector<int>>& m, int n) {
         // Vector to store the resulting paths
         vector<string> ans;
