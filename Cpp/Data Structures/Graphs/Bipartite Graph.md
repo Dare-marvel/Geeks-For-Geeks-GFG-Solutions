@@ -2,7 +2,7 @@
 
 ## [Explanation](https://takeuforward.org/graph/bipartite-graph-bfs-implementation/)
 
-## Code:
+## Code (Using BFS):
 ```cpp
 class Solution {
 public:
