@@ -1,6 +1,6 @@
 ### [Insert a node in a BST](https://www.geeksforgeeks.org/problems/insert-a-node-in-a-bst/1?utm_source=geeksforgeeks&utm_medium=ml_article_practice_tab&utm_campaign=article_practice_tab)
 
-## Explanation:
+## [Explanation](https://www.log2base2.com/data-structures/tree/insert-a-node-in-binary-search-tree.html)
 1. **Struct Node**: This is a basic structure for a node in a binary search tree (BST). Each node contains an integer value (`data`), and two pointers (`left` and `right`) pointing to its left child and right child respectively. If a node does not have a left or right child, the corresponding pointer is `NULL`.
 
 2. **Class Solution**: This class contains the method `insert` which is used to insert a new node into the BST.
