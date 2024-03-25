@@ -63,7 +63,7 @@ public:
 ```
 
 ## Code (Using DFS):
-```
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 
