@@ -51,8 +51,6 @@ The **space complexity** is also **O(N)**, as in the worst case, we might end up
     7. Enqueue the left child with a decremented line and the right child with an incremented line.
     8. Traverse 'mpp' and push the nodes into the result vector.
     9. Return the final result vector.
-
-    This implementation ensures the top view nodes are organized and returned correctly.
 */
 
 /*
