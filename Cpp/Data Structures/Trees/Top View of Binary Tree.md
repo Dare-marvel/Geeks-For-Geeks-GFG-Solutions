@@ -1,30 +1,5 @@
 ### [Top View of Binary Tree](https://www.geeksforgeeks.org/problems/top-view-of-binary-tree/1)
 
-## Explanation:
-Sure, here's an explanation of the code:
-
-1. **Struct Node**: This is a definition for a binary tree node. Each node contains an integer value, and pointers to its left and right children.
-
-2. **Class Solution**: This class contains the method `topView` which returns a list of nodes visible from the top view from left to right in a Binary Tree.
-
-3. **Function topView**: This function takes the root of a binary tree as input and returns a vector containing the top view of the tree.
-
-4. **Vector ans**: This vector stores the nodes visible from the top view of the tree.
-
-5. **Map mpp**: This map stores the first node at each horizontal distance. The key is the horizontal distance and the value is the node's data.
-
-6. **Queue q**: This queue is used to perform level-order traversal. It stores pairs of a node and its horizontal distance from the root.
-
-7. **While loop**: This loop traverses the tree using level-order traversal. For each node, if it is the first node at its horizontal distance, it adds the node's data to the map. It then enqueues the left and right children with their respective horizontal distances.
-
-8. **Adding node data to map**: If the node is the first node at its horizontal distance, its data is added to the map.
-
-9. **Enqueue left and right children**: The left child is enqueued with a decreased horizontal distance. The right child is enqueued with an increased horizontal distance.
-
-10. **Prepare the final result**: The final result is prepared by adding the data of the nodes in the map to the vector.
-
-11. **Return the result**: The function returns the result, which is a vector containing the top view of the tree.
-
 ## Time and Space Complexity:
 ### `Time Complexity`:
 The **time complexity** of the code is **O(N)**, where N is the number of nodes in the tree. This is because each node is processed once in the level-order traversal.
